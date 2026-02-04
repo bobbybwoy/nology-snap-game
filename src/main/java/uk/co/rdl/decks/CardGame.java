@@ -8,10 +8,7 @@ import java.util.ArrayList;
 public class CardGame extends Deck {
     private String name;
 
-    // public CardGame(String name, ArrayList<Card> cards) {
     public CardGame(String name) {
-        // super(cards);
-        super();
         this.deckOfCards = new ArrayList<>();
         this.name = name;
 

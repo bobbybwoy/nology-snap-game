@@ -1,8 +1,8 @@
 package uk.co.rdl.cards;
 
 public class PlayingCard extends Card {
-    private String suit;
-    private String rank;
+    private final String suit;
+    private final String rank;
 
     public PlayingCard(String rank, String suit, int cardValue) {
         super(cardValue);
