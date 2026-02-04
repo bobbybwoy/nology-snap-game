@@ -36,4 +36,10 @@ public class CardGame extends Deck {
             }
         }
     }
+
+    @Override
+    public void getDeck() {
+        System.out.printf("%s:\n\n", this.name);
+        super.getDeck();
+    }
 }

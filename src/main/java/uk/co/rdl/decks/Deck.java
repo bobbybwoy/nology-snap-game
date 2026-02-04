@@ -8,8 +8,24 @@ public class Deck {
     protected ArrayList<Card> deckOfCards;
 
     public void getDeck() {
-        for (Card card : deckOfCards) {
-            System.out.println(card);
+        // You cannot display an empty desk
+        if (deckOfCards.isEmpty()) {
+            System.out.println("There are no cards in the deck.");
+            return;
         }
+
+        for (Card card : deckOfCards) {
+            System.out.printf("%s ", card);
+        }
+        System.out.println();
+    }
+
+    public Card dealCard() {
+        if (deckOfCards.isEmpty()) {
+            System.out.println("There are no cards left to deal.");
+            return null;
+        }
+
+        return deckOfCards.removeFirst();
     }
 }
