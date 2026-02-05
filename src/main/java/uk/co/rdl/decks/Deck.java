@@ -19,13 +19,4 @@ public class Deck {
         }
         System.out.println();
     }
-
-    public PlayingCard dealCard() {
-        if (deckOfCards.isEmpty()) {
-            System.out.println("There are no cards left to deal.");
-            return null;
-        }
-
-        return deckOfCards.removeFirst();
-    }
 }

@@ -36,6 +36,15 @@ public class CardGame extends Deck {
         }
     }
 
+    public PlayingCard dealCard() {
+        if (deckOfCards.isEmpty()) {
+            System.out.println("There are no cards left to deal.");
+            return null;
+        }
+
+        return deckOfCards.removeFirst();
+    }
+
     @Override
     public void getDeck() {
         System.out.printf("%s:\n\n", this.name);
