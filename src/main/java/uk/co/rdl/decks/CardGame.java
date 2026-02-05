@@ -1,6 +1,5 @@
 package uk.co.rdl.decks;
 
-import uk.co.rdl.cards.Card;
 import uk.co.rdl.cards.PlayingCard;
 
 import java.util.ArrayList;
@@ -31,7 +30,7 @@ public class CardGame extends Deck {
                     case 14: selectedRank = "A"; break;
                     default: selectedRank = Integer.toString(rankIndex);
                 }
-                Card card = new PlayingCard(selectedRank, selectedSuit, rankIndex);
+                PlayingCard card = new PlayingCard(selectedRank, selectedSuit, rankIndex);
                 this.deckOfCards.add(card);
             }
         }

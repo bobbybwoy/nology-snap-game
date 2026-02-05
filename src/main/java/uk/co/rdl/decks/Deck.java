@@ -1,11 +1,11 @@
 package uk.co.rdl.decks;
 
-import uk.co.rdl.cards.Card;
+import uk.co.rdl.cards.PlayingCard;
 
 import java.util.ArrayList;
 
 public class Deck {
-    protected ArrayList<Card> deckOfCards;
+    protected ArrayList<PlayingCard> deckOfCards;
 
     public void getDeck() {
         // You cannot display an empty desk
@@ -14,13 +14,13 @@ public class Deck {
             return;
         }
 
-        for (Card card : deckOfCards) {
+        for (PlayingCard card : deckOfCards) {
             System.out.printf("%s ", card);
         }
         System.out.println();
     }
 
-    public Card dealCard() {
+    public PlayingCard dealCard() {
         if (deckOfCards.isEmpty()) {
             System.out.println("There are no cards left to deal.");
             return null;
