@@ -1,11 +1,12 @@
 package uk.co.rdl.decks;
 
-import uk.co.rdl.cards.PlayingCard;
+import uk.co.rdl.cards.Card;
 
 import java.util.ArrayList;
 
-public class CardGame extends Deck {
+public class CardGame {
     private String name;
+    protected ArrayList<Card> deckOfCards;
 
     public CardGame(String name) {
         this.deckOfCards = new ArrayList<>();
@@ -30,13 +31,13 @@ public class CardGame extends Deck {
                     case 14: selectedRank = "A"; break;
                     default: selectedRank = Integer.toString(rankIndex);
                 }
-                PlayingCard card = new PlayingCard(selectedRank, selectedSuit, rankIndex);
+                Card card = new Card(selectedRank, selectedSuit, rankIndex);
                 this.deckOfCards.add(card);
             }
         }
     }
 
-    public PlayingCard dealCard() {
+    public Card dealCard() {
         if (deckOfCards.isEmpty()) {
             System.out.println("There are no cards left to deal.");
             return null;
@@ -45,9 +46,16 @@ public class CardGame extends Deck {
         return deckOfCards.removeFirst();
     }
 
-    @Override
     public void getDeck() {
         System.out.printf("%s:\n\n", this.name);
-        super.getDeck();
+        if (deckOfCards.isEmpty()) {
+            System.out.println("There are no cards in the deck.");
+            return;
+        }
+
+        for (Card card : deckOfCards) {
+            System.out.printf("%s ", card);
+        }
+        System.out.println();
     }
 }

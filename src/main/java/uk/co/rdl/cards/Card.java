@@ -1,12 +1,11 @@
 package uk.co.rdl.cards;
 
-public class PlayingCard {
+public class Card {
     private final String suit;
     private final String rank;
     private final int cardValue;
 
-    public PlayingCard(String rank, String suit, int cardValue) {
-        // super(cardValue);
+    public Card(String rank, String suit, int cardValue) {
         this.cardValue = cardValue;
         this.rank = rank;
         this.suit = suit;
