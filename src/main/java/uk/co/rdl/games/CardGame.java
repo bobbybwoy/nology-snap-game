@@ -25,10 +25,6 @@ public class CardGame {
         return deckOfCards.removeFirst();
     }
 
-    public void setDeck(ArrayList<Card> deck) {
-        deckOfCards = deck;
-    }
-
     public void getDeck() {
         System.out.printf("%s:\n\n", this.name);
         if (deckOfCards.isEmpty()) {
