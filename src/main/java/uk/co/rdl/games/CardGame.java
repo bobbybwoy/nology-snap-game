@@ -5,6 +5,7 @@ import uk.co.rdl.enums.Suit;
 import uk.co.rdl.enums.Symbol;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class CardGame {
     private final String name;
@@ -39,6 +40,11 @@ public class CardGame {
             System.out.printf("%s ", card);
         }
         System.out.println();
+    }
+
+    public ArrayList<Card> sortDeckInNumberOrder() {
+        Collections.sort(deckOfCards);
+        return deckOfCards;
     }
 
     private ArrayList<Card> generateCards() {

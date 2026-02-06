@@ -8,5 +8,7 @@ public class Main {
         cardGame.getDeck();
         System.out.printf("Card: %s\n", cardGame.dealCard());
         cardGame.getDeck();
+        cardGame.sortDeckInNumberOrder();
+        cardGame.getDeck();
     }
 }
