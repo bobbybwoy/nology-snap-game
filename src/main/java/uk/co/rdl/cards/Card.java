@@ -2,17 +2,17 @@ package uk.co.rdl.cards;
 
 public class Card {
     private final String suit;
-    private final String rank;
-    private final int cardValue;
+    private final String symbol;
+    private final int value;
 
-    public Card(String rank, String suit, int cardValue) {
-        this.cardValue = cardValue;
-        this.rank = rank;
+    public Card(String symbol, String suit, int value) {
+        this.value = value;
+        this.symbol = symbol;
         this.suit = suit;
     }
 
     @Override
     public String toString() {
-        return String.format("%s%s", this.rank, this.suit);
+        return String.format("%s%s", this.symbol, this.suit);
     }
 }

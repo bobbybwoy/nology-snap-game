@@ -1,6 +1,6 @@
 package uk.co.rdl;
 
-import uk.co.rdl.decks.CardGame;
+import uk.co.rdl.games.CardGame;
 
 public class Main {
     static void main() {
