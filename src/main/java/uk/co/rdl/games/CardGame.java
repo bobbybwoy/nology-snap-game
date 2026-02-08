@@ -6,6 +6,7 @@ import uk.co.rdl.enums.Symbol;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class CardGame {
     private final String name;
@@ -26,7 +27,6 @@ public class CardGame {
     }
 
     public void getDeck() {
-        System.out.printf("%s:\n", this.name);
         if (deckOfCards.isEmpty()) {
             System.out.println("There are no cards in the deck.");
             return;
@@ -40,6 +40,12 @@ public class CardGame {
 
     public ArrayList<Card> sortDeckInNumberOrder() {
         Collections.sort(deckOfCards);
+        return deckOfCards;
+    }
+
+    public ArrayList<Card> sortDeckIntoSuits() {
+        Comparator<Card> bySuitAndSymbol = Comparator.comparing(Card::getOrdinalValues);
+        deckOfCards.sort(bySuitAndSymbol);
         return deckOfCards;
     }
 

@@ -5,12 +5,13 @@ import uk.co.rdl.games.CardGame;
 public class Main {
     static void main() {
         CardGame cardGame = new CardGame("Snap!");
-        System.out.println("Deck before card removal");
-        cardGame.getDeck();
-        System.out.printf("Card: %s\n", cardGame.dealCard());
-        System.out.println("Deck after card removal and before sort:");
+        System.out.println("Before Number Order sort:");
         cardGame.getDeck();
         cardGame.sortDeckInNumberOrder();
+        System.out.println("After after Number Order sort, before Suit Order sort:");
+        cardGame.getDeck();
+        cardGame.sortDeckIntoSuits();
+        System.out.println("After Suit order sort:");
         cardGame.getDeck();
     }
 }

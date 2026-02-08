@@ -1,5 +1,8 @@
 package uk.co.rdl.cards;
 
+import uk.co.rdl.enums.Suit;
+import uk.co.rdl.enums.Symbol;
+
 public class Card implements Comparable<Card> {
     private final String suit;
     private final String symbol;
@@ -9,6 +12,16 @@ public class Card implements Comparable<Card> {
         this.value = value;
         this.symbol = symbol;
         this.suit = suit;
+    }
+
+    public int getOrdinalValues() {
+        return Integer.parseInt(
+                String.format(
+                        "%d%02d",
+                        Suit.valueOf(this.suit).ordinal(),
+                        Symbol.valueOf(this.symbol).ordinal()
+                )
+        );
     }
 
     @Override
