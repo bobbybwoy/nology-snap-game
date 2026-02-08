@@ -7,7 +7,6 @@
     <list default="true" id="af22fd95-1b71-4117-8053-6a1f28cf337a" name="Changes" comment="Refactored code&#10;&#10;- Symbol.java:&#10;  - Removed the symbolValue property, as the value of the card belongs to the card&#10;&#10;- Card.java:&#10;  - Changed the output of the card to reflect a description of the card not its presentation&#10;&#10;- CardGame.java:&#10;  - in the `generateCards()`, change the code to store the name of the symbol and suit and calculated the value based on the symbol's ordinal value + 2&#10;  &#10;- workspace.xml:&#10;  - Because of macOS's Privacy and Security, I needed to give IntelliJ access to a removable device, as the workspace was not being loaded correctly...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/rdl/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/rdl/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/rdl/cards/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/rdl/cards/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/rdl/games/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/rdl/games/CardGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1770541503158</updated>
-      <workItem from="1770541504356" duration="5013000" />
+      <workItem from="1770541504356" duration="6213000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored code&#10;&#10;- Symbol.java:&#10;  - Removed the symbolValue property, as the value of the card belongs to the card&#10;&#10;- Card.java:&#10;  - Changed the output of the card to reflect a description of the card not its presentation&#10;&#10;- CardGame.java:&#10;  - in the `generateCards()`, change the code to store the name of the symbol and suit and calculated the value based on the symbol's ordinal value + 2&#10;  &#10;- workspace.xml:&#10;  - Because of macOS's Privacy and Security, I needed to give IntelliJ access to a removable device, as the workspace was not being loaded correctly...">
       <option name="closed" value="true" />

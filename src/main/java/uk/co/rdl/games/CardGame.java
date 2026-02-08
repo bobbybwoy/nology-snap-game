@@ -49,6 +49,17 @@ public class CardGame {
         return deckOfCards;
     }
 
+    public ArrayList<Card> shuffleDeck() {
+        ArrayList<Card> tempDeck = new ArrayList<>();
+
+        while (!deckOfCards.isEmpty()) {
+            tempDeck.add(deckOfCards.remove((int) (Math.random() * deckOfCards.size())));
+        }
+
+        deckOfCards = tempDeck;
+        return deckOfCards;
+    }
+
     private ArrayList<Card> generateCards() {
         ArrayList<Card> deck = new ArrayList<>();
 
