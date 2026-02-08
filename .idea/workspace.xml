@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8261e08f-ca2d-4d68-9faf-35ade261b6de" name="Changes" comment="Implemented the `sortDeckInNumberOrder()` method&#10;- CardGame.java:&#10;  - Added the new method using the `Collections` class's method `sort()`&#10;  &#10;- Card.java:&#10;  - Implemented the Comparable interface, and the `compareTo()` method to support the `Collections.sort()` method in CardGame.java&#10;  &#10;- Main.java:&#10;  - Called the `sortDeckInNumberOrder()` and `getDeck()` to check that the cards were sorted&#10;&#10;- Also, having to rebuild .idea folder, there are a number of files changes associated with it">
+    <list default="true" id="af22fd95-1b71-4117-8053-6a1f28cf337a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/rdl/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/rdl/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/rdl/cards/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/rdl/cards/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/rdl/enums/Symbol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/rdl/enums/Symbol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/rdl/games/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/rdl/games/CardGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,9 +20,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
   "associatedIndex": 7
 }]]></component>
-  <component name="ProjectId" id="39IbzYYMoLXZVJrVQ0pvhY0ZsAI" />
+  <component name="ProjectId" id="39NfZMCWCzNlzIDfc2wmBYpyyrH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,29 +52,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8261e08f-ca2d-4d68-9faf-35ade261b6de" name="Changes" comment="" />
-      <created>1770386794350</created>
+      <changelist id="af22fd95-1b71-4117-8053-6a1f28cf337a" name="Changes" comment="" />
+      <created>1770541503158</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1770386794350</updated>
-      <workItem from="1770386795394" duration="1986000" />
+      <updated>1770541503158</updated>
+      <workItem from="1770541504356" duration="2228000" />
     </task>
-    <task id="LOCAL-00001" summary="Implemented the `sortDeckInNumberOrder()` method&#10;- CardGame.java:&#10;  - Added the new method using the `Collections` class's method `sort()`&#10;  &#10;- Card.java:&#10;  - Implemented the Comparable interface, and the `compareTo()` method to support the `Collections.sort()` method in CardGame.java&#10;  &#10;- Main.java:&#10;  - Called the `sortDeckInNumberOrder()` and `getDeck()` to check that the cards were sorted&#10;&#10;- Also, having to rebuild .idea folder, there are a number of files changes associated with it">
-      <option name="closed" value="true" />
-      <created>1770390208165</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1770390208165</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented the `sortDeckInNumberOrder()` method&#10;- CardGame.java:&#10;  - Added the new method using the `Collections` class's method `sort()`&#10;  &#10;- Card.java:&#10;  - Implemented the Comparable interface, and the `compareTo()` method to support the `Collections.sort()` method in CardGame.java&#10;  &#10;- Main.java:&#10;  - Called the `sortDeckInNumberOrder()` and `getDeck()` to check that the cards were sorted&#10;&#10;- Also, having to rebuild .idea folder, there are a number of files changes associated with it" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented the `sortDeckInNumberOrder()` method&#10;- CardGame.java:&#10;  - Added the new method using the `Collections` class's method `sort()`&#10;  &#10;- Card.java:&#10;  - Implemented the Comparable interface, and the `compareTo()` method to support the `Collections.sort()` method in CardGame.java&#10;  &#10;- Main.java:&#10;  - Called the `sortDeckInNumberOrder()` and `getDeck()` to check that the cards were sorted&#10;&#10;- Also, having to rebuild .idea folder, there are a number of files changes associated with it" />
   </component>
 </project>

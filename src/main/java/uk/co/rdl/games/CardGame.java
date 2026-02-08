@@ -26,14 +26,14 @@ public class CardGame {
     }
 
     public void getDeck() {
-        System.out.printf("%s:\n\n", this.name);
+        System.out.printf("%s:\n", this.name);
         if (deckOfCards.isEmpty()) {
             System.out.println("There are no cards in the deck.");
             return;
         }
 
         for (Card card : deckOfCards) {
-            System.out.printf("%s ", card);
+            System.out.printf("%s\n", card);
         }
         System.out.println();
     }
@@ -48,7 +48,7 @@ public class CardGame {
 
         for (Suit suit : Suit.values()) {
             for (Symbol symbol : Symbol.values()) {
-                Card card = new Card(symbol.getDisplayValue(), suit.getDisplayValue(), symbol.getSymbolValue());
+                Card card = new Card(symbol.name(), suit.name(), symbol.ordinal() + 2);
                 deck.add(card);
             }
         }

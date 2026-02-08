@@ -12,12 +12,12 @@ public class Card implements Comparable<Card> {
     }
 
     @Override
-    public String toString() {
-        return String.format("%s%s", this.symbol, this.suit);
+    public int compareTo(Card card) {
+        return Integer.compare(this.value, card.value);
     }
 
     @Override
-    public int compareTo(Card card) {
-        return Integer.compare(this.value, card.value);
+    public String toString() {
+        return String.format("Card{suit=%s, symbol=%s, value=%d}", this.suit, this.symbol, this.value);
     }
 }
