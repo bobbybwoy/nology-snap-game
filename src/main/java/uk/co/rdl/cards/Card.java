@@ -1,22 +1,36 @@
 package uk.co.rdl.cards;
 
-public class Card {
-    private int cardValue;
+import uk.co.rdl.enums.Suit;
+import uk.co.rdl.enums.Symbol;
 
-    public Card(int cardValue) {
-        this.cardValue = cardValue;
+public class Card implements Comparable<Card> {
+    private final String suit;
+    private final String symbol;
+    private final int value;
+
+    public Card(String symbol, String suit, int value) {
+        this.value = value;
+        this.symbol = symbol;
+        this.suit = suit;
     }
 
-    public int getCardValue() {
-        return this.cardValue;
+    public int getOrdinalValues() {
+        return Integer.parseInt(
+                String.format(
+                        "%d%02d",
+                        Suit.valueOf(this.suit).ordinal(),
+                        Symbol.valueOf(this.symbol).ordinal()
+                )
+        );
     }
 
-    public void setCardValue(int cardValue) {
-        this.cardValue = cardValue;
+    @Override
+    public int compareTo(Card card) {
+        return Integer.compare(this.value, card.value);
     }
 
     @Override
     public String toString() {
-        return "Card value is " + this.cardValue;
+        return String.format("Card{suit=%s, symbol=%s, value=%d}", this.suit, this.symbol, this.value);
     }
 }
