@@ -14,6 +14,13 @@ public class Card implements Comparable<Card> {
         this.suit = suit;
     }
 
+    public String getSymbol() {
+        return Symbol.valueOf(this.symbol).getDisplayValue();
+    }
+
+    public String displayCard() {
+        return String.format("%s%s", Symbol.valueOf(this.symbol).getDisplayValue(), Suit.valueOf(this.suit).getDisplayValue());    }
+
     public int getOrdinalValues() {
         return Integer.parseInt(
                 String.format(

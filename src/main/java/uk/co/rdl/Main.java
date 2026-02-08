@@ -1,14 +1,12 @@
 package uk.co.rdl;
 
 import uk.co.rdl.games.CardGame;
+import uk.co.rdl.games.Snap;
 
 public class Main {
     static void main() {
-        CardGame cardGame = new CardGame("Snap!");
-        System.out.println("Before shuffle:");
-        cardGame.getDeck();;
-        cardGame.shuffleDeck();
-        System.out.println("After shuffle");
-        cardGame.getDeck();
+        Snap snap = new Snap("Snap!");
+        snap.shuffleDeck();
+        snap.play();
     }
 }
