@@ -26,7 +26,7 @@ public class Snap extends CardGame {
             currentCard = this.takeTurn();
             System.out.printf("Card dealt is %s\n", currentCard.displayCard());
             if (previousCard != null) {
-                if (previousCard.getSymbol().equals(currentCard.getSymbol())) {
+                if (previousCard.getValue() == (currentCard.getValue())) {
                     System.out.println("SNAP!!!");
                     return;
                 }

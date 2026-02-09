@@ -30,16 +30,6 @@ public class Card implements Comparable<Card> {
         return String.format("%s%s", Symbol.valueOf(this.symbol).getDisplayValue(), Suit.valueOf(this.suit).getDisplayValue());
     }
 
-    public int getOrdinalValues() {
-        return Integer.parseInt(
-                String.format(
-                        "%d%02d",
-                        Suit.valueOf(this.suit).ordinal(),
-                        Symbol.valueOf(this.symbol).ordinal()
-                )
-        );
-    }
-
     @Override
     public int compareTo(Card card) {
         return Integer.compare(this.value, card.value);
