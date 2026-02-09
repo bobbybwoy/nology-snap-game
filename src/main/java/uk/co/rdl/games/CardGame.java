@@ -10,11 +10,11 @@ import java.util.Comparator;
 
 public class CardGame {
     private final String name;
-    private ArrayList<Card> deckOfCards;
+    private ArrayList<Card> deckOfCards = new ArrayList<>();
 
     public CardGame(String name) {
         this.name = name;
-        this.deckOfCards = generateCards();
+        generateCards();
     }
 
     public Card dealCard() {
@@ -65,16 +65,16 @@ public class CardGame {
         return deckOfCards;
     }
 
-    private ArrayList<Card> generateCards() {
-        ArrayList<Card> deck = new ArrayList<>();
+    private void generateCards() {
+        if (!deckOfCards.isEmpty()) {
+            deckOfCards.clear();
+        }
 
         for (Suit suit : Suit.values()) {
             for (Symbol symbol : Symbol.values()) {
                 Card card = new Card(symbol.name(), suit.name(), symbol.ordinal() + 2);
-                deck.add(card);
+                deckOfCards.add(card);
             }
         }
-
-        return deck;
     }
 }
