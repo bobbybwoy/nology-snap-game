@@ -44,7 +44,12 @@ public class CardGame {
     }
 
     public ArrayList<Card> sortDeckIntoSuits() {
-        Comparator<Card> bySuitAndSymbol = Comparator.comparing(Card::getOrdinalValues);
+        Comparator<Card> bySuitAndSymbol = (card1, card2) -> {
+            if (Suit.valueOf(card1.getSuit()).equals(Suit.valueOf(card2.getSuit()))) {
+                return Symbol.valueOf(card1.getSymbol()).compareTo(Symbol.valueOf(card2.getSymbol()));
+            }
+            return Suit.valueOf(card1.getSuit()).compareTo(Suit.valueOf(card2.getSuit()));
+        };
         deckOfCards.sort(bySuitAndSymbol);
         return deckOfCards;
     }
