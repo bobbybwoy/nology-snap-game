@@ -14,12 +14,21 @@ public class Card implements Comparable<Card> {
         this.suit = suit;
     }
 
+    public String getSuit() {
+        return suit;
+    }
+
     public String getSymbol() {
-        return Symbol.valueOf(this.symbol).getDisplayValue();
+        return this.symbol;
+    }
+
+    public int getValue() {
+        return value;
     }
 
     public String displayCard() {
-        return String.format("%s%s", Symbol.valueOf(this.symbol).getDisplayValue(), Suit.valueOf(this.suit).getDisplayValue());    }
+        return String.format("%s%s", Symbol.valueOf(this.symbol).getDisplayValue(), Suit.valueOf(this.suit).getDisplayValue());
+    }
 
     public int getOrdinalValues() {
         return Integer.parseInt(
