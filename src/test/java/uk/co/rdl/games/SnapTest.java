@@ -1,6 +1,7 @@
 package uk.co.rdl.games;
 
 import org.junit.jupiter.api.*;
+import uk.co.rdl.Player;
 import uk.co.rdl.cards.Card;
 import uk.co.rdl.enums.Suit;
 import uk.co.rdl.enums.Symbol;
@@ -22,6 +23,8 @@ public class SnapTest {
     private Card expectedCard1;
     private Card expectedCard2;
     private Card expectedCard3;
+    private Player playerOne = new Player("Player 1");
+    private Player playerTwo = new Player("Player 2");
 
     @BeforeEach
     void setUp() {
@@ -29,7 +32,7 @@ public class SnapTest {
         expectedCard2 = new Card(Symbol.THREE.name(), Suit.HEARTS.name(), Symbol.THREE.ordinal() + CARD_VALUE_UPLIFT);
         expectedCard3 = new Card(Symbol.FOUR.name(), Suit.HEARTS.name(), Symbol.FOUR.ordinal() + CARD_VALUE_UPLIFT);
 
-        snapGame = new Snap(snapGameName);
+        snapGame = new Snap(snapGameName, playerOne, playerTwo);
     }
 
     @AfterEach
@@ -151,8 +154,7 @@ public class SnapTest {
         testIn = new ByteArrayInputStream(enterPressed.getBytes());
         System.setIn(testIn);
 
-        // Card card = snapGame.takeTurn();
-        assertInstanceOf(Card.class, snapGame.takeTurn());
+        assertInstanceOf(Card.class, snapGame.takeTurn(playerOne.getPlayerName()));
     }
 
     /*
