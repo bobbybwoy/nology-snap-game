@@ -6,19 +6,18 @@ import java.util.Scanner;
 
 public class Snap extends CardGame {
 
-    private final Scanner scanner = new Scanner(System.in);
-
     public Snap(String name) {
         super(name);
     }
 
     public Card takeTurn() {
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Take card ");
         scanner.nextLine();
         return this.dealCard();
     }
 
-    public void play() {
+    public boolean play() {
         Card previousCard = null;
         Card currentCard = null;
 
@@ -28,7 +27,7 @@ public class Snap extends CardGame {
             if (previousCard != null) {
                 if (previousCard.getValue() == (currentCard.getValue())) {
                     System.out.println("SNAP!!!");
-                    return;
+                    return true;
                 }
             }
             previousCard = currentCard;

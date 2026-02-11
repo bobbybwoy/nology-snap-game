@@ -9,12 +9,17 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class CardGame {
+    private final int CARD_VALUE_UPLIFT = 2;
     private final String name;
     private ArrayList<Card> deckOfCards = new ArrayList<>();
 
     public CardGame(String name) {
         this.name = name;
         generateCards();
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public Card dealCard() {
@@ -72,7 +77,7 @@ public class CardGame {
 
         for (Suit suit : Suit.values()) {
             for (Symbol symbol : Symbol.values()) {
-                Card card = new Card(symbol.name(), suit.name(), symbol.ordinal() + 2);
+                Card card = new Card(symbol.name(), suit.name(), symbol.ordinal() + CARD_VALUE_UPLIFT);
                 deckOfCards.add(card);
             }
         }
