@@ -1,36 +1,46 @@
 package uk.co.rdl.games;
 
+import uk.co.rdl.Player;
 import uk.co.rdl.cards.Card;
 
 import java.util.Scanner;
 
 public class Snap extends CardGame {
+    private Player playerOne;
+    private Player playerTwo;
 
-    public Snap(String name) {
+    public Snap(String name, Player playerOne, Player playerTwo) {
         super(name);
+        this.playerOne = playerOne;
+        this.playerTwo = playerTwo;
     }
 
-    public Card takeTurn() {
+    public Card takeTurn(String playerName) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Take card ");
+        System.out.printf("%s, take card ", playerName);
         scanner.nextLine();
-        return this.dealCard();
+        Card card = this.dealCard();
+        System.out.printf("%s's is %s\n", playerName, card.displayCard());
+        return card;
     }
 
     public boolean play() {
-        Card previousCard = null;
-        Card currentCard = null;
+        boolean isItPlayerOneTurn = true;
+        Card playerOneCard = this.takeTurn(this.playerOne.getPlayerName());
+        Card playerTwoCard = this.takeTurn(this.playerTwo.getPlayerName());
 
         while (true) {
-            currentCard = this.takeTurn();
-            System.out.printf("Card dealt is %s\n", currentCard.displayCard());
-            if (previousCard != null) {
-                if (previousCard.getValue() == (currentCard.getValue())) {
-                    System.out.println("SNAP!!!");
-                    return true;
-                }
+            if (playerOneCard.getValue() == (playerTwoCard.getValue())) {
+                System.out.println("SNAP!!! " + (!isItPlayerOneTurn ? this.playerOne.getPlayerName() : this.playerTwo.getPlayerName()) + " wins!");
+                return true;
             }
-            previousCard = currentCard;
+
+            if (isItPlayerOneTurn) {
+                playerOneCard = this.takeTurn(this.playerOne.getPlayerName());
+            } else {
+                playerTwoCard = this.takeTurn(this.playerTwo.getPlayerName());
+            }
+            isItPlayerOneTurn = !isItPlayerOneTurn;
         }
     }
 }
