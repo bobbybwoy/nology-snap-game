@@ -1,6 +1,5 @@
 package uk.co.rdl;
 
-import uk.co.rdl.games.CardGame;
 import uk.co.rdl.games.Snap;
 
 import java.util.Scanner;
